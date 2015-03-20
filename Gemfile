@@ -41,7 +41,9 @@ gem 'acts-as-taggable-on'
 #-------------------View层 界面功能-----------------------
 #css框架
 gem 'semantic-ui-sass','1.11.4.0'
-#该版本有bug,引用了不存在的icon.woff2 文件,需手动修改
+#semantic-ui 11.4.0 报错找不到 icon.woff2文件，是因为确实没有这个字体文件， 手动改写源码文件
+#（./versions/2.1.2/lib/ruby/gems/2.1.0/gems/semantic-ui-sass-1.11.4.0/app/assets/stylesheets/semantic-ui/elements/_icon.scss）:
+
 #find . -name "*.scss" |xargs grep "woff2"
 
 #另外 还需要修改文件(去除里面对googlefont 的引用,不然网站非常慢)
@@ -70,7 +72,7 @@ gem 'jquery-ui-themes','0.0.11'
 gem 'jquery-rails'
 
 
-gem 'sass', '3.2.19'
+gem 'sass', '3.2.19'  # 使用3.2.0 版会报 "wrong number argments 3 for 2" 错误
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
 #gem 'sprockets', '2.11.0'
