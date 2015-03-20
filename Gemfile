@@ -40,12 +40,15 @@ gem 'acts-as-taggable-on'
 
 #-------------------View层 界面功能-----------------------
 #css框架
-#gem 'semantic-ui-sass','0.16.1.0'
+gem 'semantic-ui-sass','1.11.4.0'
+#该版本有bug,引用了不存在的icon.woff2 文件,需手动修改
+#find . -name "*.scss" |xargs grep "woff2"
 
-#版本号不固定,取决于何时bundle install ,当前版本 1.6.2.0
-#需要修改文件
+#另外 还需要修改文件(去除里面对googlefont 的引用,不然网站非常慢)
+# find . -name "*.scss" |xargs grep "googleapis"
+
 # .rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/semantic-ui-sass-0c4dbb3b8657/app/assets/stylesheets/semantic-ui/globals/_site.scss
-gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
+
 
 
 #表单创建
@@ -66,8 +69,13 @@ gem 'jquery-ui-themes','0.0.11'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+
+gem 'sass', '3.2.19'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '4.0.3'
+#gem 'sprockets', '2.11.0'
+gem 'sprockets-rails', '2.1.3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -90,13 +98,14 @@ group :development do
 
   #gem "pry-debugger"
 
-# Quiet assets 用于屏蔽 rails assets log 信息,比如:
-# Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-20 17:05:52 +0800
+  # Quiet assets 用于屏蔽 rails assets log 信息,比如:
+  # Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-20 17:05:52 +0800
   gem 'quiet_assets'
 
   # Better error page for Rails and other Rack apps
   # https://github.com/charliesome/better_errors
   gem "better_errors", git: 'https://github.com/charliesome/better_errors.git'
+
 
   # Retrieve the binding of a method's caller. Can also retrieve bindings even further up the stack.
   # better_errors use this to display local variables on error pages
@@ -132,4 +141,3 @@ gem 'spring',   '1.2.0'  ,   group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
