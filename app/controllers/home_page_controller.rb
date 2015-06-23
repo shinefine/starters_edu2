@@ -1,6 +1,7 @@
+require 'settings'
 class HomePageController < ApplicationController
   def index
-    
+    @used_for = Settings.used_for
     render layout: false
   end
 

@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 #---------------------系统功能---------------------
 
@@ -16,11 +17,12 @@ gem 'ruby-pinyin'
 # 本地化支持
 gem 'rails-i18n'
 #系统全站搜索
-gem "elasticsearch", :git => "git://github.com/elasticsearch/elasticsearch-ruby.git"
-gem "elasticsearch-model", :git => "git://github.com/elasticsearch/elasticsearch-rails.git"
-gem "elasticsearch-rails", :git => "git://github.com/elasticsearch/elasticsearch-rails.git"
-
-
+#gem "elasticsearch", :git => "git://github.com/elasticsearch/elasticsearch-ruby.git"
+#gem "elasticsearch-model", :git => "git://github.com/elasticsearch/elasticsearch-rails.git"
+#gem "elasticsearch-rails", :git => "git://github.com/elasticsearch/elasticsearch-rails.git"
+gem 'elasticsearch', '1.0.12'
+gem 'elasticsearch-model','0.1.7'
+gem 'elasticsearch-rails','0.1.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -60,7 +62,7 @@ gem 'simple_form'
 gem 'kaminari','~> 0.16.1'
 
 # 表格功能增强  bundle install 之后需要 rails g wice_grid:install ，项目内需要引用js文件 //= require wice_grid  （需要jquery支持）
-gem "wice_grid", '3.4.7'
+gem 'wice_grid', '3.4.7'
 
 #jquery
 gem 'jquery-ui-rails','5.0.0'
@@ -106,12 +108,12 @@ group :development do
 
   # Better error page for Rails and other Rack apps
   # https://github.com/charliesome/better_errors
-  gem "better_errors", git: 'https://github.com/charliesome/better_errors.git'
-
+  #gem 'better_errors', git: 'https://github.com/charliesome/better_errors.git'
+  gem 'better_errors','2.1.1'
 
   # Retrieve the binding of a method's caller. Can also retrieve bindings even further up the stack.
   # better_errors use this to display local variables on error pages
-  gem "binding_of_caller"
+  gem 'binding_of_caller','0.7.2'
 end
 
 
@@ -132,6 +134,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',   '1.2.0'  ,   group: :development
 
+#支持在项目中添加自定义配置信息  link: https://github.com/settingslogic/settingslogic
+gem 'settingslogic', '2.0.9'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
