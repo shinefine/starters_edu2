@@ -5,6 +5,10 @@ class HomePageController < ApplicationController
     render layout: false
   end
 
+  def index2
+    @used_for = Settings.used_for
+    render layout: false
+  end
 
   def search
         @users = User.search(
