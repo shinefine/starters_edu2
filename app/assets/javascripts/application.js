@@ -180,8 +180,9 @@ $(function(){
 
     })
 
-    $(".login_link").on('click',function(){
+    $(".login_form_link").on('click',function(){
 
+            alert('click');
             $('.test.modal').modal('show');
 
         }

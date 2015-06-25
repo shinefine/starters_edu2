@@ -59,11 +59,37 @@ $(document)
         });
 
 
-    $('.ui.form')
-      .form(validationRules, {
-        on: 'blur'
-      })
-    ;
+//    $('.ui.form')
+//      .form(validationRules, {
+//        on: 'blur'
+//      })
+//    ;
+
+
+        $('.shapechange').on('click',function(){
+            alert('change');
+            //$('.shape').shape('flip up');
+        });
+
+       var onFormSubmitted= function (response) {
+            // Do something with response ...
+           $('.login.error.message').text(response.message);
+           alert(response.message);
+
+        }
+
+        //表单验证成功后调用的函数
+        var ajaxSubmitForm =function(){
+            var formData =   $('#login_form').serialize();
+
+            $.ajax({ type: 'POST', url: '/session/create.json', data: formData, success: onFormSubmitted });
+
+        };
+
+        //设置表单验证行为
+        $('.ui.form').form(validationRules, { onSuccess: ajaxSubmitForm });
+
+
 
     $('.masthead .information')
       .transition('scale in', 1000)
