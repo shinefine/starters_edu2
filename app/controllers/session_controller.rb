@@ -16,17 +16,18 @@ class SessionController < ApplicationController
       login_result['message']='成功登录,请稍候...'
       login_result['jump_url']=training_classes_path
     else
-      flash[:notice]=login_result['message']
+
       login_result['login']  ='false'
       login_result['message']='无效的账户或密码'
+      flash[:notice]=login_result['message']
     end
 
 
     respond_to do |format|
-                  format.html { if login_result['login']='success'
+                  format.html { if login_result['login'] == 'success'
                                   redirect_to(training_classes_path)
                                 else
-                                  redirect_to root_path
+                                  redirect_to login_path
                                 end
                               }
                   format.json{render json: login_result}

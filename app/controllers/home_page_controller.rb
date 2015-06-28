@@ -3,10 +3,15 @@
 
 #网站首页
 class HomePageController < ApplicationController
-  layout false
+
+  layout SchoolSettings.home_page_layout_name
 
   def index
-    render SchoolSettings.home_page_view_name,layout:SchoolSettings.home_page_layout_name
+    render SchoolSettings.home_page_view_name
+  end
+
+  def login
+
   end
 
   def search
