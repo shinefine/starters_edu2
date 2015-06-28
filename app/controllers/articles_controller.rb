@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     if params[:tag]
-      @articles = Article.tagged_with(params[:tag])
+      #@articles = Article.tagged_with(params[:tag])
     else
       @articles = Article.all
     end
