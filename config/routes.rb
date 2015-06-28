@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'home_page#index2'
+  root 'home_page#index'
 
   resources :articles do
     get 'tags/:tag', to: 'articles#index', as: :tag ,on: :collection

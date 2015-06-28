@@ -1,278 +1,502 @@
+<section class="section-slider">
+  <div class="flexslider fw-slider" data-autoscroll="8">
+    <ul class="slides">
+      <li class="slide overlay active flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+        <div class="slide-image">
+          <img src="./demo_files/slide-girl-with-computer-1140x385.jpg" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/slide-girl-with-computer-1140x385.jpg 1140w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/slide-girl-with-computer.jpg 1920w" sizes="100vw" alt="Educator WP" draggable="false">
+        </div>
+        <div class="slide-caption light left in" style="top: 149px;">
+          <div class="container">
+            <div class="caption-inner"><h2 class="slide-title">@school_name</h2>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- Standard Meta -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <!--页面小图标-->
-  <link href="/favicon.jpg" mce_href="/favicon.jpg" rel="bookmark" type="image/x-icon" />
-  <link href="/favicon.jpg" mce_href="/favicon.jpg" rel="icon" type="image/x-icon" />
-  <link href="/favicon.jpg" mce_href="/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
-
-  <!-- 站点属性 -->
-  <title><%=@school_name%></title>
-
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-
-  <%= javascript_include_tag 'application' %>
-
-  <!--<link rel="stylesheet" type="text/css" href="../dist/semantic.css">-->
-  <link rel="stylesheet" type="text/css" href="homepage.css">
-
-  <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>-->
-  <!--<script src="../dist/semantic.js"></script>-->
-  <script src="homepage.js"></script>
-
-  <%= csrf_meta_tags %>
-</head>
-<body id="home">
-<div class="ui inverted masthead segment">
-  <div class="ui page grid">
-    <div class="column">
-      <div class="ui inverted blue menu">
-        <div class="header item"><%=@school_name%></div>
-
-        <div class="right menu">
-
-          <a class="browse item login_popup">
-            <i class="dropdown icon" tabindex="0"></i>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录
-          </a>
-          <div class="ui flowing popup">
-
-            <div class="ui shape">
-                  <div class="ui form segment">
-                    <form id="login_form">
-                      <div class="field">
-
-                        <div class="ui left icon input">
-                          <i class="user icon"></i>
-                          <input name="user_name" type="text" placeholder="帐户">
-
-                        </div>
-                      </div>
-
-                      <div class="field">
-                        <div class="ui left icon action input">
-                          <i class="key icon"></i>
-                          <input name="password" type="password" placeholder="密码">
-                          <div class="ui black submit button">登录</div>
-                        </div>
-                      </div>
-
-                      <div class="ui login error message"></div>
-                    </form>
-                  </div>
+              <div class="slide-description">Offer courses online on WordPress Website</div>
+              <div class="buttons">
+                <a class="button button-white" href="http://educator.incrediblebytes.com/courses/" target="_blank">Browse
+                  Courses</a></div>
             </div>
           </div>
         </div>
-      </div>
-
-      <% cat_pic= "cat#{rand(1..3)}.png" %>
-      <img src="images/<%=cat_pic%>" class="ui medium image">
-      <div class="ui hidden transition information">
-        <h1 class="ui inverted header">
-          2015火热招生中
-        </h1>
-        <p>一对一教学领先品牌</p>
-
-        <div class="large basic inverted animated fade ui button">
-          <div class="visible content">了解详情</div>
-          <div class="hidden content">更多信息</div>
+      </li>
+      <li class="slide overlay" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+        <div class="slide-image">
+          <img src="./demo_files/slide-bookshop-1140x385.jpg" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/slide-bookshop-1140x385.jpg 1140w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/slide-bookshop.jpg 1920w" sizes="100vw" alt="Lorem Ipsum" draggable="false">
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="ui vertical feature segment">
-  <div class="ui centered page grid">
-    <div class="fourteen wide column">
-      <div class="ui three column center aligned stackable divided grid">
-        <div class="column">
-          <div class="ui icon header">
-            <i class="student icon"></i>
-            课程介绍
-          </div>
-          <p>提供各种SAT Toefl IAIE 课程培训</p>
-          <p>
-            <a class="ui button" href="#">
-              详细
-            </a>
-          </p>
-        </div>
-        <div class="column">
-          <div class="ui icon header">
-            <i class="code icon"></i>
-            讲师介绍
-          </div>
-          <p>
-            来自五湖四海的精英讲师们
-          </p>
-          <p>
-            <a class="ui blue right labeled icon button" href="#">
-              详细
-              <i class="right chevron icon"></i>
-            </a>
-          </p>
-        </div>
-        <div class="column">
-          <div class="ui icon header">
-            <i class="user icon"></i>
-            成功案例
-          </div>
-          <p>优秀学员对我们的评价反馈</p>
-          <p>
-            <a class="ui button" href="#">
-              详细
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="slide-caption light left" style="top: 149px;">
+          <div class="container">
+            <div class="caption-inner"><h2 class="slide-title">Lorem Ipsum</h2>
 
-<div class="ui inverted vertical segment">
-  <div class="ui very relaxed stackable page grid">
-    <div class="row">
-      <div class="column">
-        <h1 class="center aligned ui inverted header">
-          英语学习技巧
-        </h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="ten wide column">
-        <h3 class="ui inverted header">托福考试备考辅导：提升10分的15个考试技巧</h3>
-        <p>托福考试也需要有一些小技巧的，以下为大家分享的15个托福考试技巧，将有助你提升托福考试成绩哦，快来看看吧。
-        <br>
-          1.在听力完成后会有5秒倒计时，结束后开始计时10分钟的休息，休息完后让监考输入密码进入口语部分，按完第一个NEXT后别按第二个NEXT，这样中间就有无限的时间听别人答完所有的题。第1，2题也要做笔记，虽然短而且简单，但这样可以防止到时万一因为某个词而卡住。
-        </p>
-        <div class="ui basic inverted animated button button">
-          <div class="visible content">更多</div>
-          <div class="hidden content"><i class="right arrow icon"></i></div>
-        </div>
-        <div class="ui inverted section divider"></div>
-        <h3 class="ui inverted header">更多文章</h3>
-        <div class="ui inverted animated selection list">
-          <div class="item">
-            美剧超流行的10句实用口语
-            <div class="right floated">Jan 20, 2014</div>
-          </div>
-          <div class="item">
-            美国习惯用语汇总
-            <div class="right floated">Jan 1, 2014</div>
-          </div>
-          <div class="item">
-            英语常用口语118句
-            <div class="right floated">Dec 20, 2013</div>
-          </div>
-        </div>
-      </div>
-      <div class="six wide column">
-        <div class="ui form segment">
-          <h3 class="ui header">Bi-Daily Newsletter</h3>
-          <p>Sign up and get spammed with cats every day. We have no unsubscribe button!</p>
-
-          <div class="ui error message"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="ui footer vertical segment">
-  <div class="ui stackable center aligned page grid">
-    <div class="ten wide column">
-      <div class="ui three column center aligned stackable grid">
-        <div class="column">
-          <h5 class="ui inverted header">Courses</h5>
-          <div class="ui inverted link list">
-            <a class="item">Registration</a>
-            <a class="item">Course Calendar</a>
-            <a class="item">Professors</a>
-          </div>
-        </div>
-        <div class="column">
-          <h5 class="ui inverted header">Library</h5>
-          <div class="ui inverted link list">
-            <a class="item">A-Z</a>
-            <a class="item">Most Popular</a>
-            <a class="item">Recently Changed</a>
-          </div>
-        </div>
-        <div class="column">
-          <h5 class="ui inverted header">Community</h5>
-          <div class="ui inverted link list">
-            <a class="item">BBS</a>
-            <a class="item">Careers</a>
-            <a class="item">Privacy Policy</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="six wide teal inverted column">
-      <h3 class="ui inverted header">联系我们</h3>
-      <addr class="ui inverted">
-        237 二环路东三段35号 <br>
-        四川省 成都市 <br>
-      </addr>
-      <p class="ui inverted">(404) 867-5309</p>
-    </div>
-  </div>
-</div>
-
-<script>
-
-
-</script>
-<% unless flash[:notice].blank? %>
-    <script>
-        alert("<%= flash[:notice] %>");
-    </script>
-<% end%>
-
-<div class="ui dimmer page hidden">
-  <div class="ui test modal transition hidden" style="margin-top: -250px;">
-
-    <i class="close icon"></i>
-
-    <div class="content">
-      <div class="ui header">用户登陆
-      </div>
-
-      <%= form_tag action="session/create",{class:"login_form"} do%>
-          <div class="ui form">
-            <div class="ui three fields">
-              <div class="field">
-                <input type="text" name="login_name" placeholder="登陆账户名">
+              <div class="slide-description">Nam libero tempore, cum soluta nobis est eligendi</div>
+              <div class="buttons">
+                <a class="button button-white" href="http://incrediblebytes.com/" target="_blank">External Link</a>
               </div>
-              <div class="field">
-                <input class="password optional" id="user_password" name="password" type="password" placeholder="密码">
-              </div>
-
             </div>
           </div>
+        </div>
+      </li>
+      <li class="slide overlay" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+        <div class="slide-image">
+          <img src="./demo_files/slide-travel-1140x385.jpg" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/slide-travel-1140x385.jpg 1140w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/slide-travel.jpg 1920w" sizes="100vw" alt="Study Anywhere" draggable="false">
+        </div>
+        <div class="slide-caption light left" style="top: 149px;">
+          <div class="container">
+            <div class="caption-inner"><h2 class="slide-title">Study Anywhere</h2>
 
-
-          <div class="actions">
-            <div class="ui black button">
-              关闭
+              <div class="slide-description">Neque porro quisquam est, qui dolorem ipsum quia</div>
+              <div class="buttons">
+                <a class="button button-white" href="http://educator.incrediblebytes.com/courses/" target="_self">Get
+                  Started</a></div>
             </div>
-            <%= submit_tag '登陆',{class:"ui positive right labeled icon button"} %>
-
           </div>
+        </div>
+      </li>
+    </ul>
 
-      <% end %>
+    <ul class="flex-direction-nav">
+      <li><a class="flex-prev" href="http://educator.incrediblebytes.com/#"></a></li>
+      <li><a class="flex-next" href="http://educator.incrediblebytes.com/#"></a></li>
+    </ul>
+  </div>
+</section>
+<section class="section-content section-bg" style="background-color:#f5f5f5;">
+  <div class="container clearfix">
+    <div class="entry-content">
+      <div class="dm3-one-fourth">
+        <div class="dm3-box-icon dm3-box-icon-center">
+          <div class="dm3-box-icon-icon"><span class="fa fa-star"></span></div>
+          <div class="dm3-box-icon-content">
+            <h2>Great Material</h2>
 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="dm3-one-fourth">
+        <div class="dm3-box-icon dm3-box-icon-center">
+          <div class="dm3-box-icon-icon"><span class="fa fa-cogs"></span></div>
+          <div class="dm3-box-icon-content">
+            <h2>High Quality</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="dm3-one-fourth">
+        <div class="dm3-box-icon dm3-box-icon-center">
+          <div class="dm3-box-icon-icon"><span class="fa fa-heart"></span></div>
+          <div class="dm3-box-icon-content">
+            <h2>Learning is Fun</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="dm3-one-fourth dm3-column-last">
+        <div class="dm3-box-icon dm3-box-icon-center">
+          <div class="dm3-box-icon-icon"><span class="fa fa-check"></span></div>
+          <div class="dm3-box-icon-content">
+            <h2>It’s simple</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
     </div>
   </div>
+</section>
+<section class="section-content">
+
+<div class="container clearfix">
+<div class="entry-content">
+  <div class="title1 clearfix">
+    <div class="text"><h2>近期课程</h2></div>
+  </div>
+  <div class="dm3-tabs-testimonials" data-autoscroll="8">
+    <div class="entry-content dm3-tabs" style="height: 334px;">
+      <div class="dm3-tab" style="position: absolute; left: 0px; width: 100%; display: none; opacity: 0;">
+        <div class="dm3-tab-inner">
+          <article class="post-grid post-142 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-business ib_educator_category-entrepreneurship">
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/internet-entrepreneurship/"><img width="360" height="224" src="./demo_files/bookshop-managers-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="Online Bookshop" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/bookshop-managers-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/bookshop-managers-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/internet-entrepreneurship/">Internet
+                Entrepreneurship</a></h2>
+
+              <div class="price">$ 9.99</div>
+              <div class="post-excerpt">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <footer class="post-meta">
+              <span class="num-lessons">3 lessons</span><span class="difficulty">Beginner</span>
+
+
+            </footer>
+          </article>
+          <article class="post-grid post-691 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-entrepreneurship">
+
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/youtube-video/"><img width="360" height="224" src="./demo_files/idea-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="Dream" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/idea-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/idea-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/youtube-video/">Youtube Video</a></h2>
+
+              <div class="price">$ 50</div>
+              <div class="post-excerpt">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <footer class="post-meta"><span class="difficulty">Advanced</span>
+
+
+            </footer>
+          </article>
+          <article class="post-grid post-233 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-business ib_educator_category-statistics">
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/business-analysis/"><img width="360" height="224" src="./demo_files/course-investment-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="Diagrams" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/course-investment-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/course-investment-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/business-analysis/">Business Analysis</a></h2>
+
+              <div class="price">$ 30</div>
+              <div class="post-excerpt">
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                  voluptatum deleniti.</p>
+              </div>
+            </div>
+            <footer class="post-meta"><span class="num-lessons">4 lessons</span>
+
+            </footer>
+          </article>
+
+        </div>
+      </div>
+      <div class="dm3-tab" style="position: absolute; left: 0px; width: 100%; display: block; opacity: 1;">
+        <div class="dm3-tab-inner">
+          <article class="post-grid post-689 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-business">
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/course-with-vimeo-video/"><img width="360" height="224" src="./demo_files/course-investment-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="Diagrams" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/course-investment-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/course-investment-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/course-with-vimeo-video/">Course With Vimeo
+                Video</a></h2>
+
+              <div class="price">$ 90</div>
+              <div class="post-excerpt">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <footer class="post-meta">
+              <span class="num-lessons">2 lessons</span><span class="difficulty">Intermediate</span>
+
+
+            </footer>
+          </article>
+          <article class="post-grid post-231 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-business ib_educator_category-entrepreneurship">
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/web-design-business/"><img width="360" height="224" src="./demo_files/course-business-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="Success" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/course-business-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/course-business-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/web-design-business/">Web Design Business</a>
+            </h2>
+
+              <div class="price">￥ 1200</div>
+              <div class="post-excerpt">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                  laudantium, totam rem aperiam, eaque ipsa quae.</p>
+              </div>
+            </div>
+            <footer class="post-meta">
+              <span class="num-lessons">3 lessons</span><span class="difficulty">中级</span>
+
+
+            </footer>
+          </article>
+          <article class="post-grid post-161 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-educator">
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/online-advertising/"><img width="360" height="224" src="./demo_files/idea-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="Dream" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/idea-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/idea-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/online-advertising/">Online Advertising</a>
+            </h2>
+
+              <div class="price">Free</div>
+              <div class="post-excerpt">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <footer class="post-meta"><span class="num-lessons">2 lessons</span>
+
+
+            </footer>
+          </article>
+
+        </div>
+      </div>
+      <div class="dm3-tab" style="position: absolute; left: 0px; width: 100%; display: none; opacity: 0;">
+        <div class="dm3-tab-inner">
+          <article class="post-grid post-237 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-business">
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/social-media/"><img width="360" height="224" src="./demo_files/course-social-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="Image #3 caption" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/course-social-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/course-social-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/social-media/">Social Media</a></h2>
+
+              <div class="price">Free</div>
+              <div class="post-excerpt">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat.</p>
+              </div>
+            </div>
+            <footer class="post-meta">
+              <span class="num-lessons">2 lessons</span><span class="difficulty">Beginner</span>
+
+
+            </footer>
+          </article>
+          <article class="post-grid post-235 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-business ib_educator_category-statistics">
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/data-analysis/"><img width="360" height="224" src="./demo_files/girl-with-computer-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="Working" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/girl-with-computer-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/girl-with-computer-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/data-analysis/">Data Analysis</a></h2>
+
+              <div class="price">$ 30</div>
+              <div class="post-excerpt">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <footer class="post-meta"><span class="num-lessons">3 lessons</span>
+
+
+            </footer>
+          </article>
+          <article class="post-grid post-155 ib_educator_course type-ib_educator_course status-publish has-post-thumbnail hentry ib_educator_category-educator ib_educator_category-wordpress">
+            <div class="post-thumb">
+              <a href="http://educator.incrediblebytes.com/courses/introduction-to-educator-wp/"><img width="360" height="224" src="./demo_files/new-business-owner-360x224.jpg" class="attachment-ib-educator-grid wp-post-image" alt="new-business-owner" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/10/new-business-owner-360x224.jpg 360w, http://educator.incrediblebytes.com/wp-content/uploads/2014/10/new-business-owner-360x224@2x.jpg 720w" sizes="(min-width: 768px) 360px, 96vw"></a>
+            </div>
+            <div class="post-body"><h2 class="entry-title">
+              <a href="http://educator.incrediblebytes.com/courses/introduction-to-educator-wp/">Introduction to
+                Educator</a></h2>
+
+              <div class="price">Free</div>
+              <div class="post-excerpt">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <footer class="post-meta"><span class="num-lessons">6 lessons</span>
+
+
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </div>
+    <ul class="dm3-tabs-nav">
+      <li class=""><a href="#">1</a></li>
+      <li class=""><a href="#">2</a></li>
+      <li class=""><a href="#">3</a></li>
+    </ul>
+  </div>
 </div>
+</div>
+</section>
 
-</body>
 
-</html>
+<section class="section-content section-bg" style="background-color:#f5f5f5;">
+  <div class="container clearfix">
+    <div class="entry-content">
+      <div class="title1 clearfix">
+        <div class="text"><h2>讲师</h2></div>
+        <div class="sub-title">我们的专业讲师将使你的课程丰富多彩。我们的讲师皆具备丰富的教学经验与技能。
+        </div>
+      </div>
+      <div class="lecturers-grid clearfix">
+        <div class="lecturer column-1 first-row">
+          <div class="author-photo">
+            <a href="http://educator.incrediblebytes.com/author/brandon-cooper/view/courses/"><img src="./demo_files/lecturer-brandon-150x150.jpg" width="150" height="150" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-brandon-150x150.jpg 150w, http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-brandon-150x150@2x.jpg 300w" sizes="(min-width: 768px) 150px, 96vw" alt=""></a>
+          </div>
+          <div class="summary"><h3>Brandon Cooper</h3>
+
+            <div class="author-description">北京新东方优能中学高中英语词汇教师，洞悉近十年全国重点省市高考题及模拟题，了解学生需要，针对学生薄弱点对症下药。注重培养学生的发散性思维及英语能力的全面提高，培养学生扎实打好词汇基础，并在此基础上提升学生对英语的兴趣以及掌握一门语言的使用能力。
+            </div>
+            <div class="author-links">
+              <a href="http://educator.incrediblebytes.com/author/brandon-cooper/view/courses/">View Profile
+                <span class="fa fa-angle-double-right"></span></a></div>
+          </div>
+        </div>
+        <div class="lecturer column-2 first-row">
+          <div class="author-photo">
+            <a href="http://educator.incrediblebytes.com/author/jamie-smith/view/courses/"><img src="./demo_files/lecturer-jamie-150x150.jpg" width="150" height="150" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-jamie-150x150.jpg 150w, http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-jamie-150x150@2x.jpg 300w" sizes="(min-width: 768px) 150px, 96vw" alt=""></a>
+          </div>
+          <div class="summary"><h3>Jamie Smith</h3>
+
+            <div class="author-description">从事多年的英语教学，具有丰富的教学经验，在实践中逐步形成　自己的风格。根据学生年龄、层次设计不同的教学方案，简洁明快，课堂教学生动活泼，充分调动学生的积极性和主动性。
+            </div>
+            <div class="author-links">
+              <a href="http://educator.incrediblebytes.com/author/jamie-smith/view/courses/">View Profile
+                <span class="fa fa-angle-double-right"></span></a></div>
+          </div>
+        </div>
+        <div class="lecturer column-1 last-row">
+          <div class="author-photo">
+            <a href="http://educator.incrediblebytes.com/author/sharon-lawrence/view/courses/"><img src="./demo_files/lecturer-sharon-150x150.jpg" width="150" height="150" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-sharon-150x150.jpg 150w, http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-sharon-150x150@2x.jpg 300w" sizes="(min-width: 768px) 150px, 96vw" alt=""></a>
+          </div>
+          <div class="summary"><h3>Sharon Lawrence</h3>
+
+            <div class="author-description">授课风格清新自然，热情洋溢，有亲和力，幽默风趣但不失严谨。对待学生认真负责。主讲词汇，善于总结记忆单词的方法，提炼考试技巧，将零散的词汇构建成体系。
+            </div>
+            <div class="author-links">
+              <a href="http://educator.incrediblebytes.com/author/sharon-lawrence/view/courses/">View Profile
+                <span class="fa fa-angle-double-right"></span></a></div>
+          </div>
+        </div>
+        <div class="lecturer column-2 last-row">
+          <div class="author-photo">
+            <a href="http://educator.incrediblebytes.com/author/susan-whatsons/view/courses/"><img src="./demo_files/lecturer-susan-150x150.jpg" width="150" height="150" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-susan-150x150.jpg 150w, http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-susan-150x150@2x.jpg 300w" sizes="(min-width: 768px) 150px, 96vw" alt=""></a>
+          </div>
+          <div class="summary"><h3>Susan Whatsons</h3>
+
+            <div class="author-description">良好的语言天赋，深厚的语言功底，加之瑞士的游学及工作经历，使其深谙法语国家文化。爱通俗也爱典雅，爱天文地理也爱八卦奇闻。她的授课风格条理清晰，重点突出，化繁为简，生动有趣。
+            </div>
+            <div class="author-links">
+              <a href="http://educator.incrediblebytes.com/author/susan-whatsons/view/courses/">View Profile
+                <span class="fa fa-angle-double-right"></span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-content">
+  <div class="container clearfix">
+    <div class="entry-content">
+      <div class="title1 clearfix">
+        <div class="text"><h2>赛尔教育</h2></div>
+        <div class="sub-title">了解赛尔教育的几大优势</div>
+      </div>
+      <div class="dm3-one-third">
+        <h3>一对一教学指导</h3>
+
+        <p>我们针对学员提供一对一教学指导.详细信息..........</p>
+        <ul>
+          <li><a href="https://wordpress.org/plugins/ibeducator/" target="_blank">Visit Educator WP on WordPress.org&nbsp;»</a>
+          </li>
+          <li><a href="http://incrediblebytes.com/documents/plugins/educator-wp/" target="_blank">View Educator WP
+            Documentation&nbsp;»</a></li>
+          <li>
+            <a href="http://incrediblebytes.com/document/how-educator-wp-works/" target="_blank">How Educator WP Works&nbsp;»</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dm3-two-third dm3-column-last">
+        <div class="dm3-accordion">
+          <div class="dm3-collapse-item dm3-collapse-open">
+            <div class="dm3-collapse-trigger">
+              <a href="http://educator.incrediblebytes.com/#">Add Quiz to Any Lesson</a></div>
+            <div class="dm3-collapse-body dm3-in dm3-collapse" style="height: 70px;">
+              <div class="dm3-collapse-inner">Educator WP supports two types of questions: multiple choice and written
+                answer. Quizzes can be graded automatically or manually by a lecturer.
+              </div>
+            </div>
+          </div>
+          <div class="dm3-collapse-item">
+            <div class="dm3-collapse-trigger"><a href="http://educator.incrediblebytes.com/#">收费方式</a>
+            </div>
+            <div class="dm3-collapse-body dm3-collapse">
+              <div class="dm3-collapse-inner">我们支持三种收费方式: 信用卡, 现金以及银行转账:)
+              </div>
+            </div>
+          </div>
+          <div class="dm3-collapse-item">
+            <div class="dm3-collapse-trigger"><a href="http://educator.incrediblebytes.com/#">Email Notifications</a>
+            </div>
+            <div class="dm3-collapse-body dm3-collapse">
+              <div class="dm3-collapse-inner">Students receive email notifications. You can configure templates of
+                email notifications from admin panel.
+              </div>
+            </div>
+          </div>
+          <div class="dm3-collapse-item">
+            <div class="dm3-collapse-trigger">
+              <a href="http://educator.incrediblebytes.com/#">Roles for Lecturers and Students</a></div>
+            <div class="dm3-collapse-body dm3-collapse">
+              <div class="dm3-collapse-inner">Students and lecturers have different roles – lecturer, student.
+                Lecturers can create courses and add grades.
+              </div>
+            </div>
+          </div>
+          <div class="dm3-collapse-item">
+            <div class="dm3-collapse-trigger"><a href="http://educator.incrediblebytes.com/#">Course Categories</a>
+            </div>
+            <div class="dm3-collapse-body dm3-collapse">
+              <div class="dm3-collapse-inner">Categorize courses to make it easier for students to find what they
+                need.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</section>
+
+<!--学员感言-->
+<section class="section-content section-bg" style="background-color:#f5f5f5;">
+  <div class="container clearfix">
+    <div class="entry-content">
+      <div class="title1 clearfix">
+        <div class="text"><h2>优秀学员</h2></div>
+      </div>
+      <div class="dm3-tabs-testimonials" data-autoscroll="8">
+        <div class="dm3-tabs" style="height: 334px;">
+          <div class="dm3-tab" style="position: absolute; left: 0px; width: 100%; display: none; opacity: 0;">
+            <div class="dm3-tab-inner">
+              <blockquote>“如果你浪费了自己的年龄，那是挺可悲的。因为你的青春只能持续一点儿时间——很短的一点儿时间。
+                ”
+              </blockquote>
+              <div class="dm3-testimonial-photo"><img src="./demo_files/student-1.jpg" alt=""></div>
+              <div class="dm3-testimonial-name">Jinny Wise</div>
+              <div class="dm3-testimonial-description">美国大学</div>
+            </div>
+          </div>
+          <div class="dm3-tab" style="position: absolute; left: 0px; width: 100%; display: block; opacity: 1;">
+            <div class="dm3-tab-inner">
+              <blockquote>“人生并不像火车要通过每个站似的经过每一个生活阶段。人生总是直向前行走，从不留下什么。”
+              </blockquote>
+              <div class="dm3-testimonial-photo"><img src="./demo_files/student-2.jpg" alt=""></div>
+              <div class="dm3-testimonial-name">James</div>
+              <div class="dm3-testimonial-description">剑桥大学</div>
+            </div>
+          </div>
+          <div class="dm3-tab" style="position: absolute; left: 0px; width: 100%; display: none; opacity: 0;">
+            <div class="dm3-tab-inner">
+              <blockquote>“伟大的思想能变成巨大的财富。”
+              </blockquote>
+              <div class="dm3-testimonial-photo"><img src="./demo_files/student-3.jpg" alt=""></div>
+              <div class="dm3-testimonial-name"><a href="http://google.com/" target="_blank">John Doe</a></div>
+              <div class="dm3-testimonial-description">哈佛大学</div>
+            </div>
+          </div>
+        </div>
+        <ul class="dm3-tabs-nav">
+          <li class=""><a href="#">1</a></li>
+          <li class=""><a href="#">2</a></li>
+          <li class=""><a href="#">3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+

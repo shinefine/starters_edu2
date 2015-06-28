@@ -3,14 +3,10 @@
 
 #网站首页
 class HomePageController < ApplicationController
-  layout SchoolSettings.home_page_layout
+  layout false
+
   def index
-    @layoutname=SchoolSettings.home_page_layout
-  end
-
-  def index2
-    @layoutname=SchoolSettings.home_page_layout
-
+    render SchoolSettings.home_page_view_name,layout:SchoolSettings.home_page_layout_name
   end
 
   def search
@@ -18,7 +14,7 @@ class HomePageController < ApplicationController
              query: {
                 multi_match: {
                   query: params[:q].to_s,
-              fields: ['name', 'intro']
+                  :fields => %w(name intro)
             }
           }
         ).records
