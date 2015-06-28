@@ -1,3 +1,5 @@
+这些配置没有用到，仅仅作为示例
+
 defaults: &defaults
 
 
@@ -5,10 +7,10 @@ defaults: &defaults
   cool:
     saweet: nested settings
 
-  used_for: 'XX教育'
-  #used_for: 其它教育
   neat_setting: 24
   awesome_setting: <%= "Did you know 5 + 5 = #{5 + 5}?" %>
+
+
 
 development:
   <<: *defaults

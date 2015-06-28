@@ -1,8 +1,10 @@
+require 'settings'
+
 class ApplicationController < ActionController::Base
+  before_action :set_school_name
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-
 
 
   helper_method :current_user
@@ -33,6 +35,10 @@ class ApplicationController < ActionController::Base
       students=[]
     end
     @students =students
+  end
+
+  def set_school_name
+    @school_name = SchoolSettings.school_name
   end
 
 end

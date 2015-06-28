@@ -12,7 +12,7 @@
   <link href="/favicon.jpg" mce_href="/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
 
   <!-- 站点属性 -->
-  <title><%=@used_for%></title>
+  <title><%=@school_name%></title>
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
@@ -32,7 +32,8 @@
   <div class="ui page grid">
     <div class="column">
       <div class="ui inverted blue menu">
-        <div class="header item"><%=@used_for%></div>
+        <div class="header item"><%=@school_name%></div>
+
         <div class="right menu">
 
           <a class="browse item login_popup">
@@ -41,9 +42,7 @@
           </a>
           <div class="ui flowing popup">
 
-            <div class="ui shape" style="width: 200px;height:300px;">
-              <div class="sides">
-                <div class="active side">
+            <div class="ui shape">
                   <div class="ui form segment">
                     <form id="login_form">
                       <div class="field">
@@ -65,19 +64,9 @@
 
                       <div class="ui login error message"></div>
                     </form>
-
                   </div>
-                </div>
-                <div class="side">This is yet another side</div>
-                <div class="side">This is the last side</div>
-              </div>
             </div>
-
-            <a class="shapechange">change!</a>
           </div>
-
-          <a class="item login_form_link">old登录</a>
-
         </div>
       </div>
 

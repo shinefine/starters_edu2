@@ -16,7 +16,7 @@ Gemfile.lock
 #数据库配置信息不加入版本库(因为包含数据库密码信息),服务器上手工创建此文件
 /config/database.yml
 
-
+/config/school_config.yml
 
 
 # 忽略所有 logfiles 和 tempfiles.

@@ -1,13 +1,16 @@
-require 'settings'
+
+
+
+#网站首页
 class HomePageController < ApplicationController
+  layout SchoolSettings.home_page_layout
   def index
-    @used_for = Settings.used_for
-    render layout: false
+    @layoutname=SchoolSettings.home_page_layout
   end
 
   def index2
-    @used_for = Settings.used_for
-    render layout: false
+    @layoutname=SchoolSettings.home_page_layout
+
   end
 
   def search

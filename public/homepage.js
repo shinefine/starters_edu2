@@ -73,8 +73,12 @@ $(document)
 
        var onFormSubmitted= function (response) {
             // Do something with response ...
-           $('.login.error.message').text(response.message);
-           alert(response.message);
+           $('.login.error.message').text(response.message).show();
+
+           if(response.login == 'success')
+           {
+               window.location= response.jump_url;
+           }
 
         }
 

@@ -1,5 +1,5 @@
 class SessionController < ApplicationController
-  #登录登出 控制器
+  #用户登录登出 控制器
   def create
     #用户登陆
     login_user = User.authenticate(params[:user_name], params[:password])
@@ -13,7 +13,8 @@ class SessionController < ApplicationController
       flash[:need_set_password] ='您还没有设置登陆密码,建议您现在就去设置密码,请点击顶端信息栏上右边的绿色[设置密码]按钮' if params[:password].blank?
 
       login_result['login']  ='success'
-      login_result['message']='成功登录'
+      login_result['message']='成功登录,请稍候...'
+      login_result['jump_url']=training_classes_path
     else
       flash[:notice]=login_result['message']
       login_result['login']  ='false'
