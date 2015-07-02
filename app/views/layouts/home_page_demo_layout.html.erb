@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="profile" href="http://gmpg.org/xfn/11">-->
   <!--<link rel="pingback" href="http://educator.incrediblebytes.com/xmlrpc.php">-->
-  <link type="text/css" media="all" href="./demo_files/demo_school.css" rel="stylesheet">
+  <link type="text/css" media="all" href="/demo_files/demo_school.css" rel="stylesheet">
   <title><%=@school_name%></title>
 
 
@@ -17,7 +17,7 @@
   <!--<link rel="canonical" href="./demo_files/demo.html">-->
   <!--<link rel="shortlink" href="./demo_files/demo.html">-->
 
-  <script src="./demo_files/wp-emoji-release.min.js" type="text/javascript"></script>
+
   <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
   .en-markup-crop-options {
       top: 18px !important;
@@ -52,32 +52,25 @@
       <div id="header-container">
         <div class="container clearfix">
           <div id="main-logo">
-            <a href="./demo_files/demo.html" style="line-height: 60px;">
-              <img src="./demo_files/logo.png" srcset="./demo_files/logo.png 1x, ./demo_files/logo@2x.png 2x" alt="">
+            <a href="/demo_files/demo.html" style="line-height: 60px;">
+              <img src="/demo_files/logo.png" srcset="/demo_files/logo.png 1x, /demo_files/logo@2x.png 2x" alt="">
             </a>
           </div>
 
           <ul id="auth-nav">
             <li>
               <div class="auth-nav-register" style="line-height: 60px;">
-                <a class="button" href="/login">登陆</a></div>
+                <a class="button" href="/login">登陆123</a></div>
             </li>
           </ul>
-          <div id="header-search">
-            <button style="height: 60px;"><span class="fa fa-search"></span></button>
-            <form action="./demo_files/demo.html" method="get">
-              <div class="clearfix">
-                <input type="text" name="s" placeholder="Search...">
-              </div>
-            </form>
-          </div>
 
           <nav id="main-nav">
             <ul id="menu-main-menu" class="menu">
               <li id="menu-item-778" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-115 current_page_item menu-item-778">
                 <a href="/" style="line-height: 60px;">首页</a></li>
               <li id="menu-item-764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-764">
-                <a href="#" style="line-height: 60px;">课程</a></li>
+                <%=link_to '课程',courseList_path,{style:"line-height: 60px;"}%>
+
               <li id="menu-item-768" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-768">
                 <a href="#" style="line-height: 60px;">讲师</a>
                 <ul class="sub-menu">
@@ -133,7 +126,7 @@
 
 
 
-<script type="text/javascript" defer="" src="./demo_files/demo_school.js"></script>
+<script type="text/javascript" defer="" src="/demo_files/demo_school.js"></script>
 <div id="page-overlay"></div>
 
 </body>
