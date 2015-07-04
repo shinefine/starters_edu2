@@ -105,7 +105,17 @@
 <section class="section-content">
 
 <div class="container clearfix">
+
 <div class="entry-content">
+<div class="title1 clearfix">
+  <div class="text">
+    <h2>Latest Courses</h2>
+  </div>
+  <div class="sub-title">
+    <%= link_to '查看所有课程', courseList_path %>
+   </div>
+</div>
+
   <div class="title1 clearfix">
     <div class="text"><h2>近期课程</h2></div>
   </div>
@@ -309,72 +319,11 @@
 </div>
 </section>
 
+<!--讲师介绍 区域-->
 
-<section class="section-content section-bg" style="background-color:#f5f5f5;">
-  <div class="container clearfix">
-    <div class="entry-content">
-      <div class="title1 clearfix">
-        <div class="text"><h2>讲师</h2></div>
-        <div class="sub-title">我们的专业讲师将使你的课程丰富多彩。我们的讲师皆具备丰富的教学经验与技能。
-        </div>
-      </div>
-      <div class="lecturers-grid clearfix">
-        <div class="lecturer column-1 first-row">
-          <div class="author-photo">
-            <a href="#"><img src="./demo_files/lecturer-brandon-150x150.jpg" width="150" height="150" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-brandon-150x150.jpg 150w, http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-brandon-150x150@2x.jpg 300w" sizes="(min-width: 768px) 150px, 96vw" alt=""></a>
-          </div>
-          <div class="summary"><h3>Brandon Cooper</h3>
+<%= render 'home_page/partical_lecturers', locals: {lecturers: @lecturers} %>
 
-            <div class="author-description">北京新东方优能中学高中英语词汇教师，洞悉近十年全国重点省市高考题及模拟题，了解学生需要，针对学生薄弱点对症下药。注重培养学生的发散性思维及英语能力的全面提高，培养学生扎实打好词汇基础，并在此基础上提升学生对英语的兴趣以及掌握一门语言的使用能力。
-            </div>
-            <div class="author-links">
-              <a href="#">View Profile
-                <span class="fa fa-angle-double-right"></span></a></div>
-          </div>
-        </div>
-        <div class="lecturer column-2 first-row">
-          <div class="author-photo">
-            <a href="#"><img src="./demo_files/lecturer-jamie-150x150.jpg" width="150" height="150" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-jamie-150x150.jpg 150w, http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-jamie-150x150@2x.jpg 300w" sizes="(min-width: 768px) 150px, 96vw" alt=""></a>
-          </div>
-          <div class="summary"><h3>Jamie Smith</h3>
 
-            <div class="author-description">从事多年的英语教学，具有丰富的教学经验，在实践中逐步形成　自己的风格。根据学生年龄、层次设计不同的教学方案，简洁明快，课堂教学生动活泼，充分调动学生的积极性和主动性。
-            </div>
-            <div class="author-links">
-              <a href="#">View Profile
-                <span class="fa fa-angle-double-right"></span></a></div>
-          </div>
-        </div>
-        <div class="lecturer column-1 last-row">
-          <div class="author-photo">
-            <a href="#"><img src="./demo_files/lecturer-sharon-150x150.jpg" width="150" height="150" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-sharon-150x150.jpg 150w, http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-sharon-150x150@2x.jpg 300w" sizes="(min-width: 768px) 150px, 96vw" alt=""></a>
-          </div>
-          <div class="summary"><h3>Sharon Lawrence</h3>
-
-            <div class="author-description">授课风格清新自然，热情洋溢，有亲和力，幽默风趣但不失严谨。对待学生认真负责。主讲词汇，善于总结记忆单词的方法，提炼考试技巧，将零散的词汇构建成体系。
-            </div>
-            <div class="author-links">
-              <a href="#">View Profile
-                <span class="fa fa-angle-double-right"></span></a></div>
-          </div>
-        </div>
-        <div class="lecturer column-2 last-row">
-          <div class="author-photo">
-            <a href="#"><img src="./demo_files/lecturer-susan-150x150.jpg" width="150" height="150" srcset="http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-susan-150x150.jpg 150w, http://educator.incrediblebytes.com/wp-content/uploads/2014/12/lecturer-susan-150x150@2x.jpg 300w" sizes="(min-width: 768px) 150px, 96vw" alt=""></a>
-          </div>
-          <div class="summary"><h3>Susan Whatsons</h3>
-
-            <div class="author-description">良好的语言天赋，深厚的语言功底，加之瑞士的游学及工作经历，使其深谙法语国家文化。爱通俗也爱典雅，爱天文地理也爱八卦奇闻。她的授课风格条理清晰，重点突出，化繁为简，生动有趣。
-            </div>
-            <div class="author-links">
-              <a href="#">View Profile
-                <span class="fa fa-angle-double-right"></span></a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section-content">

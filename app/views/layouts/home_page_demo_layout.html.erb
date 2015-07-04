@@ -52,7 +52,7 @@
       <div id="header-container">
         <div class="container clearfix">
           <div id="main-logo">
-            <a href="/demo_files/demo.html" style="line-height: 60px;">
+            <a href="/" style="line-height: 60px;">
               <img src="/demo_files/logo.png" srcset="/demo_files/logo.png 1x, /demo_files/logo@2x.png 2x" alt="">
             </a>
           </div>
@@ -60,16 +60,16 @@
           <ul id="auth-nav">
             <li>
               <div class="auth-nav-register" style="line-height: 60px;">
-                <a class="button" href="/login">登陆123</a></div>
+                <a class="button" href="/login">登陆</a></div>
             </li>
           </ul>
 
           <nav id="main-nav">
             <ul id="menu-main-menu" class="menu">
-              <li id="menu-item-778" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-115 current_page_item menu-item-778">
+              <li id="menu-item-778" class="menu-item menu-item-type-post_type menu-item-object-page <%=' current-menu-item current_page_item ' if params['action']=="index" %> page_item page-item-115  menu-item-778">
                 <a href="/" style="line-height: 60px;">首页</a></li>
-              <li id="menu-item-764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-764">
-                <%=link_to '课程',courseList_path,{style:"line-height: 60px;"}%>
+              <li id="menu-item-764" class="menu-item menu-item-type-custom <%=' current-menu-item current_page_item ' if params['action']=="course_list" %>menu-item-object-custom menu-item-764">
+                <%=link_to '课程',courseList_path({category: 'ALL'}),{style:"line-height: 60px;"}%>
 
               <li id="menu-item-768" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-768">
                 <a href="#" style="line-height: 60px;">讲师</a>
