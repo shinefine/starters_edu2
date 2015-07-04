@@ -4,6 +4,7 @@
 #网站首页
 class HomePageController < ApplicationController
 
+  before_action :set_lecturers
   layout SchoolSettings.home_page_layout_name
 
 
@@ -119,7 +120,6 @@ class HomePageController < ApplicationController
   end
 
   def index
-    @lecturers =HomePageController.lecturers
 
     render SchoolSettings.home_page_view_name
   end
@@ -139,16 +139,16 @@ class HomePageController < ApplicationController
         ).records
   end
 
+  def lecturer_profile
+    id = params[:id].to_i
+    @lecturer = HomePageController.lecturers[id]
+  end
+
   def course_list
     @category =params[:category].upcase
 
     @courses = HomePageController.courses.values
     @courses = HomePageController.courses.values.select{|c| c[:category] == @category}     unless @category =='ALL'
-
-
-
-
-
   end
 
   def big_data_report_scores
@@ -204,5 +204,9 @@ class HomePageController < ApplicationController
 
 
     redirect_to  home_page_training_class_schedule_url
+  end
+
+  def set_lecturers
+    @lecturers =HomePageController.lecturers
   end
 end

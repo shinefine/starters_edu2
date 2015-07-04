@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'home_page#index'
   get 'home_page/course_list' =>'home_page#course_list',as:'courseList'
+  get 'home_page/lecturer_profile' => 'home_page#lecturer_profile', as:'lecturer_profile'
   get '/login' =>'home_page#login', as: 'login'
   resources :articles do
     get 'tags/:tag', to: 'articles#index', as: :tag ,on: :collection
