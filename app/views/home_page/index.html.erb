@@ -15,8 +15,12 @@
   <title><%=@school_name%></title>
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
+  <link rel="stylesheet" type="text/css" href="/semantic.min.css">
 
-  <%= javascript_include_tag 'application' %>
+
+  <%= javascript_include_tag "application" %>
+  <script src="/semantic.min.js"></script>
+
 
   <!--<link rel="stylesheet" type="text/css" href="../dist/semantic.css">-->
   <link rel="stylesheet" type="text/css" href="homepage.css">
@@ -37,15 +41,17 @@
         <div class="right menu">
 
           <a class="browse item login_popup">
-            <i class="dropdown icon" tabindex="0"></i>
+
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录
+            <i class="dropdown icon" tabindex="0"></i>
           </a>
           <div class="ui flowing popup">
 
             <div class="ui shape">
               <div class="ui form segment">
                 <form id="login_form">
-                  <div class="field">
+
+                  <div class="field" style="width: 250px;">
 
                     <div class="ui left icon input">
                       <i class="user icon"></i>

@@ -85,6 +85,8 @@ Rails.application.routes.draw do
 
   resources :training_classes do
 
+    get :add_student ,on: :collection #给培训班添加一个学员,(ajax调用)
+    get :remove_student ,on: :collection #给培训班添加一个学员,(ajax调用)
     resources :attendances #考勤
 
 
@@ -99,6 +101,7 @@ Rails.application.routes.draw do
 
       resources :comments   #讲师/班主任可以给学员创建评语
     end
+
 
 
   end

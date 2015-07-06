@@ -112,6 +112,41 @@ class TrainingClassesController < ApplicationController
     end
   end
 
+  def add_student
+
+    student =Student.find(params[:student_id])
+    training_class=TrainingClass.find( params[:training_class_id])
+
+    training_class.students.append(student) unless training_class.students.include? student
+
+    respond_to do |format|
+      format.json{
+        render json:{
+            result: 'success',
+            student_id:student.id
+        }
+      }
+    end
+  end
+
+  def remove_student
+
+    student =Student.find(params[:student_id])
+    training_class=TrainingClass.find( params[:training_class_id])
+
+    training_class.students.destroy(student) if training_class.students.include? student
+
+
+    respond_to do |format|
+      format.json{
+        render json:{
+            result: 'success',
+            student_id:student.id
+        }
+      }
+    end
+  end
+
   private
 
   def set_training_class_types
@@ -135,7 +170,7 @@ class TrainingClassesController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_training_class
-      @training_class = TrainingClass.find(params[:id])
+     @training_class = TrainingClass.find(params[:id])
     end
 
 

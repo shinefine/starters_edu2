@@ -30,29 +30,38 @@ class StudentsController < ApplicationController
 
   def search
 
-    if params[:q].blank?
-      redirect_to  students_url
-    else
+    @training_class_id=params[:training_class_id]
 
+
+    if params[:q].blank?
+      @students=User.all.select{|u| u.student?}.collect{|u| u.student}
+    else
       set_user_permission_students
       student_ids = @students.map{|stu| stu.id}
 
-      search_result = User.search(
-          query: {
-              multi_match: {
-                  query: params[:q].to_s,
-                  fields: ['name', 'intro']
-              }
-          }
-      ).records
+      @students=User.where("name like ?","%#{params[:q]}%").to_a.select{|u| u.student?}.collect{|u| u.student}
 
-      users = search_result.select { |record| record.student? && student_ids.include?(record.student.id)  }
+      # search_result = User.search(
+      #     query: {
+      #         multi_match: {
+      #             query: params[:q].to_s,
+      #             fields: ['name', 'intro']
+      #         }
+      #     }
+      # ).records
+      #
+      # users = search_result.select { |record| record.student? && student_ids.include?(record.student.id)  }
+      #
+      # @students =  users.collect { |u | u.student }
+    end
 
-      @students =  users.collect { |u | u.student }
+    @students =Kaminari.paginate_array(@students).page(params[:page]).per(10)
 
-      @students =Kaminari.paginate_array(@students).page(params[:page]).per(10)
+    respond_to do |format| # <- 这里
+      format.html {render :partial => 'student_profileList', :object => @students }
 
-      render 'index'
+      #format.html { render 'index' }
+      format.js
 
     end
 

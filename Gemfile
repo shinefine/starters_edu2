@@ -42,7 +42,7 @@ gem 'mysql2', '~> 0.3.16'
 
 #-------------------View层 界面功能-----------------------
 #css框架
-gem 'semantic-ui-sass','1.12.3.0'
+#gem 'semantic-ui-sass','1.12.3.0'
 #semantic-ui 11.4.0 报错找不到 icon.woff2文件，是因为确实没有这个字体文件， 手动改写源码文件
 #（./versions/2.1.2/lib/ruby/gems/2.1.0/gems/semantic-ui-sass-1.11.4.0/app/assets/stylesheets/semantic-ui/elements/_icon.scss）:
 

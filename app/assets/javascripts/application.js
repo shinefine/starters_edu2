@@ -14,15 +14,22 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require chosen-jquery
-//= require semantic-ui
 //= require d3.v3
 //= require nv.d3.min
 //= require stream_layers
 //= require articles
 //= require wice_grid
 //= require image_preview_before_upload
+//-----ssssddd----require semantic-ui
+
+
 
 $(function(){
+
+    $('.special.cards .image').dimmer({
+        on: 'hover'
+    });
+
     $('.message .close')
         .on('click', function() {
             $(this).closest('.message').transition('scale out');

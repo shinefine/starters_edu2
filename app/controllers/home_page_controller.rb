@@ -152,6 +152,7 @@ class HomePageController < ApplicationController
   end
 
   def big_data_report_scores
+
     #大数据统计分析功能
     @year =params[:year]
     @exam_type = params[:exam_type]
@@ -167,6 +168,7 @@ class HomePageController < ApplicationController
       @hash_students_score_trend[stu] =result
     }
 
+    render layout:'application'
     #
     # @scores_grp_by_student = RealScore.sat.true_real.where(year:var_year).group_by{|record| record.student_id}
     #
