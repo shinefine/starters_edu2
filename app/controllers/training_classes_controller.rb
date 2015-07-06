@@ -68,6 +68,7 @@ class TrainingClassesController < ApplicationController
     set_training_class_types
     set_subject_types
     set_user_permission_students
+
   end
 
   # POST /training_classes
@@ -110,6 +111,10 @@ class TrainingClassesController < ApplicationController
       format.html { redirect_to training_classes_url, notice: "培训班#{@training_class.name}已删除" }
       format.json { head :no_content }
     end
+  end
+
+  def set_students
+    set_training_class
   end
 
   def add_student
@@ -175,7 +180,7 @@ class TrainingClassesController < ApplicationController
 
 
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # 参数白名单定义
     def training_class_params
       params.require(:training_class).permit(:name, :code, :start_date, :end_date,
                                              :exam_type,:training_class_type,

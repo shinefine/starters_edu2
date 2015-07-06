@@ -39,6 +39,7 @@ Rails.application.routes.draw do
 
 
   resources :students , concerns: [:freezingable] do
+    get :search_with_trainingclass,on: :collection # 带培训班id 的学员查询,会从查询结果中过滤掉培训班中已有的学员( 培训班 Set_Students 页面专用)
     get :search , on: :collection
 
     resources :real_scores do
@@ -87,6 +88,7 @@ Rails.application.routes.draw do
 
     get :add_student ,on: :collection #给培训班添加一个学员,(ajax调用)
     get :remove_student ,on: :collection #给培训班添加一个学员,(ajax调用)
+    get :set_students, on: :member #给培训班设置学员 页面
     resources :attendances #考勤
 
 

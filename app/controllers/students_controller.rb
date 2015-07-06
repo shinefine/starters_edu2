@@ -28,10 +28,8 @@ class StudentsController < ApplicationController
     end
   end
 
-  def search
-
-    @training_class_id=params[:training_class_id]
-
+  def search_with_trainingclass
+    @training_class=TrainingClass.find(params[:training_class_id])
 
     if params[:q].blank?
       @students=User.all.select{|u| u.student?}.collect{|u| u.student}
@@ -41,29 +39,34 @@ class StudentsController < ApplicationController
 
       @students=User.where("name like ?","%#{params[:q]}%").to_a.select{|u| u.student?}.collect{|u| u.student}
 
-      # search_result = User.search(
-      #     query: {
-      #         multi_match: {
-      #             query: params[:q].to_s,
-      #             fields: ['name', 'intro']
-      #         }
-      #     }
-      # ).records
-      #
-      # users = search_result.select { |record| record.student? && student_ids.include?(record.student.id)  }
-      #
-      # @students =  users.collect { |u | u.student }
     end
 
-    @students =Kaminari.paginate_array(@students).page(params[:page]).per(10)
+    @students = @students - @training_class.students
 
     respond_to do |format| # <- 这里
       format.html {render :partial => 'student_profileList', :object => @students }
 
-      #format.html { render 'index' }
       format.js
 
     end
+  end
+
+  def search
+
+
+    if params[:q].blank?
+      @students=Student.all
+    else
+      set_user_permission_students
+      student_ids = @students.map{|stu| stu.id}
+
+      @students=User.where("name like ?","%#{params[:q]}%").to_a.select{|u| u.student?}.collect{|u| u.student}
+
+    end
+
+    @students =Kaminari.paginate_array(@students).page(params[:page]).per(10)
+
+    render 'index'
 
   end
 

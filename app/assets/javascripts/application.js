@@ -246,8 +246,8 @@ $(function(){
 
     $('#menu').sidebar('attach events', '.launch.button, .launch.item');
 
-    $('.left.sidebar').first().sidebar('attach events', '.toggle.button');
-    $('.toggle.button').removeClass('disabled');
+//    $('.left.sidebar').first().sidebar('attach events', '.toggle.button');
+//    $('.toggle.button').removeClass('disabled');
 
 });
 
