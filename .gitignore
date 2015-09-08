@@ -22,6 +22,7 @@ Gemfile.lock
 # 忽略所有 logfiles 和 tempfiles.
 /log/*.log
 /tmp
+
 nohup.out
 
 .ruby-version

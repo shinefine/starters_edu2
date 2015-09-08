@@ -56,6 +56,7 @@
     <div class="field">
       <!--嵌套表单用于 增改删 相关试卷-->
       <%= f.simple_fields_for :subjects do |builder| %>
+
           <%= render 'subject_form_fields', f: builder %>
       <% end %>
     </div>
